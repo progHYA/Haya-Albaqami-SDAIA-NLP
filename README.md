@@ -1,51 +1,74 @@
-**Project:** Natural Language Processing –  Analysis
-This project was developed as part of my training at **SDAIA Academy**.
-## 👤 Author
-* **Haya Albaqami**
+# بيان | من نصٍّ نقرؤه، إلى معنى نبنيه
 
+## معالجة اللغة الطبيعية باستخدام المحولات (Transformers)
 
----
-
-## 📌 Project Overview
-
-This project applies **Natural Language Processing (NLP)**
+> من نصٍّ نقرؤه، إلى معنى نبنيه.  
+> نبني «بيان» خطوة واضحة بعد أخرى؛ من جملة عربية وإنجليزية إلى مشروع نقيّمه ونفهم حدوده.
 
 ---
 
-## 🎯 Objective
+## 👩🏻‍💻 معلومات المشروع
+
+| البند | التفاصيل |
+|---|---|
+| **اسم المشروع** | بيان |
+| **المجال** | معالجة اللغة الطبيعية (NLP) |
+| **التقنية** | Transformers |
+| **المتدربة** | هياء البقمي |
+| **المدرب** | Meaad Almarri |
+| **الجهة التدريبية** | SDAIA Academy |
+| **رمز المقرر** | `SDAIA-F-CRS-100-01-V1` |
+
+**#SDAIAAcademy #SDAIA #NLP #Transformers #ArtificialIntelligence**
+
+---
+
+## 1. Problem — المشكلة
+
+تتعامل الأنظمة الحديثة مع كميات كبيرة من النصوص المكتوبة باللغة العربية والإنجليزية، إلا أن فهم النصوص البشرية وتحويلها إلى معلومات قابلة للتحليل يمثل تحديًا في مجال معالجة اللغة الطبيعية.
+
+يهدف مشروع **«بيان»** إلى تطبيق تقنيات معالجة اللغة الطبيعية باستخدام نماذج **Transformers** لفهم النصوص والتعامل معها بطريقة عملية، مع توضيح مراحل بناء الحل، ونتائجه، وحدوده.
+
+---
+
+## 2. Scope — النطاق
+
+يشمل المشروع:
+
+- معالجة النصوص العربية والإنجليزية.
+- تجهيز النصوص قبل إدخالها إلى النموذج.
+- استخدام بنية **Transformers** في معالجة اللغة الطبيعية.
+- تنفيذ النموذج وتجربة مدخلات مختلفة.
+- تقييم النتائج.
+- عرض النتائج في جدول واضح.
+- توثيق خطوات إعادة تشغيل المشروع.
+- توضيح حدود النموذج.
+
+### خارج النطاق
+
+لا يهدف المشروع إلى بناء نموذج لغوي ضخم من الصفر أو تدريبه على نطاق تجاري واسع، وإنما يركز على تطبيق وفهم تقنيات Transformers ضمن نطاق المشروع التدريبي.
+
+---
+
+## 3. Architecture — المعمارية
+
+يعتمد مشروع **«بيان»** على عدة مراحل تبدأ من إدخال النص وتنتهي بإخراج النتيجة وتقييمها.
+
+### Architecture Diagram
+<img width="603" height="525" alt="Screenshot 2026-09-29 at 11 19 15 PM" src="https://github.com/user-attachments/assets/4ef3a230-33c0-4cf9-acb7-538f3229ee5e" />
 
 
+### مراحل المعالجة
 
-<img width="150" height="150" alt="book" src="https://github.com/user-attachments/assets/9ccae20a-fa25-4634-8d57-e0a86ecb4f2d" />
-
-
-
-Complete Project Flow
-
-
-Raw Reviews
-
-↓
-Data Cleaning
-
-↓
-Text Preprocessing
-
-↓
-TF-IDF Feature Extraction
-
-↓
-Train/Test Split
-
-↓
-Logistic Regression
-
-↓
-Prediction
-
-↓
+```text
+Input Text
+     ↓
+Preprocessing
+     ↓
+Tokenizer
+     ↓
+Transformer Model
+     ↓
+Prediction / Output
+     ↓
 Evaluation
-
-↓
-New Review Classification
-
