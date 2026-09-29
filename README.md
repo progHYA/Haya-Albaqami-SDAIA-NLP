@@ -72,3 +72,72 @@ Transformer Model
 Prediction / Output
      ↓
 Evaluation
+
+# Final Submission
+
+**Version:** `v1.0`
+
+**Submission Tag:** `submission-v1.0`
+
+**Final Commit SHA:** `29 sep 2026 11:50`
+
+**Status:** Final Submission
+
+
+# Final Submission Acknowledgement
+
+I confirm that this repository represents my final submission for the project "بيان".
+
+## Submission Details
+
+- Project: بيان
+- Version: v1.0
+- Submission Tag: submission-v1.0
+- Course Code: SDAIA-F-CRS-100-01-V1
+- Trainee: هياء البقمي
+- Trainer: Meaad Almarri
+
+The submitted repository contains the project documentation, source code,
+results, reproduction steps, evidence, and required reports.
+
+**Final Commit SHA:** `29 sep 2026 11:50`
+
+**Submission Status:** Final
+
+
+# Authorship & Contribution
+
+## My Contribution
+
+I independently contributed to the development and documentation of the
+"بيان" project.
+
+My contribution includes:
+
+- Defining the project scope and problem.
+- Developing the NLP workflow.
+- Working with the Transformer-based approach.
+- Preparing and testing Arabic and English inputs.
+- Evaluating and documenting the results.
+- Preparing the project architecture.
+- Writing the project documentation and reproduction steps.
+- Preparing the final submission and evidence package.
+
+### Contribution Evidence
+
+My contribution can be verified through the project's Git history,
+source-code files, documentation changes, and final commit.
+
+**Final Commit:** `29 sep 2026 11:50`
+
+# Assistance Disclosure
+
+AI assistance was used for documentation support, README structuring,
+English language refinement, and organizing the project documentation.
+
+ChatGPT was used as a supporting tool for writing and documentation.
+The project implementation, testing, results, and final decisions were
+reviewed and validated by the trainee.
+
+AI assistance was not used as a substitute for the trainee's own
+understanding, testing, or evaluation of the project.
