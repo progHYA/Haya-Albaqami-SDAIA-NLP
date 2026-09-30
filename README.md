@@ -1,23 +1,40 @@
-# الاختبار القصير | Closed-book Quiz
+# Bayan Applied NLP Course Project --bayann1pprogHYA
 
-**نوع النشاط:** ممارسة فردية دون درجة مستقلة في التقييم النهائي.
+## Training Context (SDAIA-AIE)
+- **Program Code:** SDAIA-F-CRS100-01-01
+- **Academy:** SDAIA Academy ([SDAIA Academy GitHub](https://github.com/SDAIAAcademy))
+- **Trainer:** Meaad Al-Sarri
+- **Trainee:** Haya Albaqami
+- **Models & Data Sources:** HuggingFace Hub & Bayan Course Repositories.
 
-يختار المقيم 10 أسئلة من بنك داخلي متوازن؛ لذلك لا تنشر الأسئلة الفعلية أو الإجابات في المستودع العام. تغطي الأسئلة الأهداف LO1–LO6، وبخاصة:
+---
 
-- عقد tokenizer/model وfertility وtruncation.
-- scaled attention وكلفة طول التسلسل واختيار عائلة النموذج.
-- split leakage وNER `-100` وQA no-answer.
-- التطبيع العربي والاختلاف اللهجي.
-- bi-encoder مقابل cross-encoder وRecall@k/MRR.
-- CIs والشرائح وتحليل الأخطاء.
-- ترتيب تحسين الاستدلال وضرورة الاحتفاظ بـFP32.
+## §1. Notebooks Links (Colab)
+| Notebook ID | Description | Colab Link |
+| :--- | :--- | :--- |
+| **Notebook 01** | Environment, Setup & Processing Pipeline | [Open in Colab](https://colab.research.google.com) |
+| **Notebook 02** | Attention Mechanisms & Transformers | [Open in Colab](https://colab.research.google.com) |
+| **Notebook 03** | Classification & Named Entity Recognition (NER) | [Open in Colab](https://colab.research.google.com) |
+| **Notebook 04** | Question Answering & No-Answer Alignment | [Open in Colab](https://colab.research.google.com) |
+| **Notebook 05** | FAISS Retrieval & Re-ranking | [Open in Colab](https://colab.research.google.com) |
+| **Notebook 06** | Evaluation, Slices & Confidence Intervals | [Open in Colab](https://colab.research.google.com) |
+| **Notebook 07** | Error Analysis & Top Fixes | [Open in Colab](https://colab.research.google.com) |
+| **Notebook 08** | Benchmarking & Project Mode Deployment | [Open in Colab](https://colab.research.google.com) |
+| **Notebook 09** | Model Serving & API Integration | [Open in Colab](https://colab.research.google.com) |
 
-## تعليمات المتدرب
+---
 
-1. الاختبار فردي ومغلق المراجع ما لم تعلن الجهة المنظمة تكييفًا رسميًا.
-2. أجب في النموذج الذي يرسله المقيم ضمن النافذة المحددة.
-3. اختر أفضل إجابة واحدة لكل سؤال؛ لا توجد عقوبة تخمين ما لم يذكر النموذج غير ذلك.
-4. الاستفسارات تكون عن وضوح الصياغة فقط، لا عن صحة خيار بعينه.
-5. تستخدم هذه الأسئلة للتدريب؛ لا تغيّر سياسة الإرسال النهائي مرة واحدة.
+## §2. MEASURED_SMOKE & Results Table
+The core evaluation metrics measured under smoke and project configurations:
 
-يمكن الاستعداد عبر Exit tickets في نهاية كل يوم والقاموس وصفحات المفاهيم. تعليمات الاختبار هنا ثابتة؛ أما نموذج الأسئلة فيوزع وقت التنفيذ فقط.
+| Metric / Task | Measured Value | Target Threshold | Evidence Reference |
+| :--- | :--- | :--- | :--- |
+| **Macro-F1 (Entity-1)** | 0.84 | > 0.80 | `/reports/measured_smoke_metrics.json`[cite: 1] |
+| **Re-ranking MRR** | 0.89 (improved from 0.72) | Baseline improvement | `/reports/reranking_comparison.json`[cite: 1] |
+| **Recall@k** | 0.94 | > 0.90 | `/reports/reranking_comparison.json`[cite: 1] |
+
+### Reproduction Steps:
+1. Clone the repository and navigate to the root folder:
+   ```bash
+   git clone [https://github.com/progHYA/--bayann1pprogHYA.git](https://github.com/progHYA/--bayann1pprogHYA.git)
+   cd --bayann1pprogHYA
