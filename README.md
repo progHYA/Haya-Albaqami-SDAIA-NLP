@@ -1,143 +1,152 @@
-# بيان | من نصٍّ نقرؤه، إلى معنى نبنيه
+# Bayan — Bilingual Applied NLP Project
 
-## معالجة اللغة الطبيعية باستخدام المحولات (Transformers)
+**Learner ID / GitHub username:** FILL_ME  
+**GitHub:** FILL_ME  
+**Final release:** FILL_ME
 
-> من نصٍّ نقرؤه، إلى معنى نبنيه.  
-> نبني «بيان» خطوة واضحة بعد أخرى؛ من جملة عربية وإنجليزية إلى مشروع نقيّمه ونفهم حدوده.
+## Executive summary | الملخص
 
----
+FILL_ME: فقرة قصيرة تشرح المشكلة والمستخدم والنتيجة والحدود. اذكر صراحة أن البيانات تعليمية اصطناعية/عامة وليست بيانات مستفيدين حقيقية.
 
-## 👩🏻‍💻 معلومات المشروع
+## What Bayan does | ماذا يفعل بيان؟
 
-| البند | التفاصيل |
-|---|---|
-| **اسم المشروع** | بيان |
-| **المجال** | معالجة اللغة الطبيعية (NLP) |
-| **التقنية** | Transformers |
-| **المتدربة** | هياء البقمي |
-| **المدرب** | Meaad Almarri |
-| **الجهة التدريبية** | SDAIA Academy |
-| **رمز المقرر** | `SDAIA-F-CRS-100-01-V1` |
+1. FILL_ME: privacy/preprocessing.
+2. FILL_ME: topic and sentiment classification.
+3. FILL_ME: NER.
+4. FILL_ME: extractive QA/no-answer.
+5. FILL_ME: bilingual semantic search.
+6. FILL_ME: evaluation and serving.
 
-**#SDAIAAcademy #SDAIA #NLP #Transformers #ArtificialIntelligence**
+## Scope and non-goals | النطاق وما لا يدعيه المشروع
 
----
+- In scope: FILL_ME
+- Out of scope: FILL_ME
+- Not for: production/government decisions without further validation — FILL_ME
 
-## 1. Problem — المشكلة
+## Reproduce on Google Colab Free
 
-تتعامل الأنظمة الحديثة مع كميات كبيرة من النصوص المكتوبة باللغة العربية والإنجليزية، إلا أن فهم النصوص البشرية وتحويلها إلى معلومات قابلة للتحليل يمثل تحديًا في مجال معالجة اللغة الطبيعية.
+| # | Notebook | Colab | Purpose |
+|---:|---|---|---|
+| 00 | runtime doctor | FILL_ME | environment |
+| 01 | text processing/tokenisation | FILL_ME | Gate A |
+| 02 | attention/transformers | FILL_ME | LO2 |
+| 03 | classification | FILL_ME | Gate B |
+| 04 | NER and QA | FILL_ME | Gate B |
+| 05 | Arabic NLP | FILL_ME | Gate C |
+| 06 | semantic search | FILL_ME | Gate C |
+| 07 | evaluation/error analysis | FILL_ME | Gate C |
+| 08 | optimisation/serving | FILL_ME | Gate D |
 
-يهدف مشروع **«بيان»** إلى تطبيق تقنيات معالجة اللغة الطبيعية باستخدام نماذج **Transformers** لفهم النصوص والتعامل معها بطريقة عملية، مع توضيح مراحل بناء الحل، ونتائجه، وحدوده.
+Clean-run instructions:
 
----
+1. Open notebook 00 and choose **Save a copy in Drive**.
+2. Run in numeric order using Colab Free.
+3. Use **Runtime → Restart session and run all** before final evidence.
+4. Do not place tokens, PII, model weights, or private Drive links in the repository.
 
-## 2. Scope — النطاق
+## Architecture
 
-يشمل المشروع:
+```mermaid
+flowchart LR
+    A["AR/EN feedback"] --> B["Privacy + preprocessing"]
+    B --> C["Classification / NER / QA"]
+    B --> D["Embeddings + FAISS"]
+    C --> E["Versioned response"]
+    D --> E
+    E --> F["Evaluation + tested API"]
+```
 
-- معالجة النصوص العربية والإنجليزية.
-- تجهيز النصوص قبل إدخالها إلى النموذج.
-- استخدام بنية **Transformers** في معالجة اللغة الطبيعية.
-- تنفيذ النموذج وتجربة مدخلات مختلفة.
-- تقييم النتائج.
-- عرض النتائج في جدول واضح.
-- توثيق خطوات إعادة تشغيل المشروع.
-- توضيح حدود النموذج.
+## Results | النتائج
 
-### خارج النطاق
+كل رقم يحمل `MEASURED`, `MEASURED_SMOKE`, `SYSTEMS_SMOKE`, `TARGET`, أو `REFERENCE`.
 
-لا يهدف المشروع إلى بناء نموذج لغوي ضخم من الصفر أو تدريبه على نطاق تجاري واسع، وإنما يركز على تطبيق وفهم تقنيات Transformers ضمن نطاق المشروع التدريبي.
+| Component | Metric | Result + label | Split/workload | Evidence |
+|---|---|---:|---|---|
+| topic classification | Macro-F1 | FILL_ME | FILL_ME | FILL_ME |
+| sentiment classification | Macro-F1 | FILL_ME | FILL_ME | FILL_ME |
+| NER | entity F1 | FILL_ME | FILL_ME | FILL_ME |
+| QA | EM/F1/no-answer | FILL_ME | FILL_ME | FILL_ME |
+| search | Recall@k/MRR | FILL_ME | FILL_ME | FILL_ME |
+| serving | p95/throughput/quality tax | FILL_ME | FILL_ME | `BENCHMARKS.md` |
 
----
+## Error found and decision | خطأ وقرار
 
-## 3. Architecture — المعمارية
+- Observed failure: FILL_ME
+- Slice/taxonomy: FILL_ME
+- Fix or deferred action: FILL_ME
+- Evidence after change: FILL_ME
 
-يعتمد مشروع **«بيان»** على عدة مراحل تبدأ من إدخال النص وتنتهي بإخراج النتيجة وتقييمها.
+## Measured extension | الامتداد المقاس
 
-### Architecture Diagram
-<img width="603" height="525" alt="Screenshot 2026-09-29 at 11 19 15 PM" src="https://github.com/user-attachments/assets/4ef3a230-33c0-4cf9-acb7-538f3229ee5e" />
+- Extension chosen: FILL_ME
+- Baseline: FILL_ME
+- Benefit/cost metric: FILL_ME
+- Evidence path: FILL_ME
+- Decision and limitation: FILL_ME
 
+## Repository evidence
 
-### مراحل المعالجة
+- `DATA_CARD.md`
+- `MODEL_CARD.md`
+- `EVALUATION_REPORT.md`
+- `BENCHMARKS.md`
+- `DECISIONS.md`
+- `PROGRESS.md`
+- `PROJECT_SUMMARY.json`
+- `SUBMISSION.yml`
 
-```text
-Input Text
-     ↓
-Preprocessing
-     ↓
-Tokenizer
-     ↓
-Transformer Model
-     ↓
-Prediction / Output
-     ↓
-Evaluation
+## Limitations and responsible use
 
-# Final Submission
+- Data limitation: FILL_ME
+- Arabic/dialect/Arabizi limitation: FILL_ME
+- Task/model limitation: FILL_ME
+- Evaluation uncertainty: FILL_ME
+- Serving/security limitation: FILL_ME
+- Human review requirement: FILL_ME
 
-**Version:** `v1.0`
+## Final validation
 
-**Submission Tag:** `submission-v1.0`
+```bash
+PYTHONPATH=src python scripts/validate_submission.py . --require-tag
+PYTHONPATH=src python scripts/preflight_submission.py . --require-tag
+```
 
-**Final Commit SHA:** `29 sep 2026 11:50`
+- Validator status: FILL_ME
+- CI badge/link: FILL_ME
+- Release `submission-v1.0`: FILL_ME
 
-**Status:** Final Submission
+## Presentation | العرض
 
+See `PRESENTATION.md`. FILL_ME: link your own examples and reports.
 
-# Final Submission Acknowledgement
+## My contribution | مساهمتي
 
-I confirm that this repository represents my final submission for the project "بيان".
+- My change and file: FILL_ME
+- Reason and evidence: FILL_ME
 
-## Submission Details
+## AI assistance | الاستعانة بالأدوات
 
-- Project: بيان
-- Version: v1.0
-- Submission Tag: submission-v1.0
-- Course Code: SDAIA-F-CRS-100-01-V1
-- Trainee: هياء البقمي
-- Trainer: Meaad Almarri
+FILL_ME: tool, assistance, verification and source credits—or honestly state none.
 
-The submitted repository contains the project documentation, source code,
-results, reproduction steps, evidence, and required reports.
+## Training context | السياق التدريبي
 
-**Final Commit SHA:** `29 sep 2026 11:50`
+This educational project was developed during Applied Natural Language Processing
+with Transformers (SDA-AIE-211) in the SDAIA Academy training context.
+أُنجز هذا المشروع التعليمي ضمن دورة معالجة اللغات الطبيعية باستخدام المحولات
+(SDA-AIE-211) في السياق التدريبي لأكاديمية سدايا.
 
-**Submission Status:** Final
+Academy | الأكاديمية: [SDAIA Academy](https://github.com/SDAIAAcademy)  
+Trainer | المدربة: Meaad Al-Marri — ميعاد المري  
+Course source: https://github.com/almiyead-rgb/bayan-applied-nlp-course  
+#SDAIAAcademy
 
+This attribution does not claim Academy endorsement or ownership of third-party assets.
+لا يدعي هذا النسب اعتماد المشروع أو تملك أصول الأطراف الأخرى.
 
-# Authorship & Contribution
+## Final hand-in acknowledgement | إقرار التسليم النهائي
 
-## My Contribution
+FILL_ME: confirm you reviewed all requirements and understand this version is graded once, with no edited replacement after hand-in. Final tag: `submission-v1.0`.
 
-I independently contributed to the development and documentation of the
-"بيان" project.
+## License and acknowledgements
 
-My contribution includes:
-
-- Defining the project scope and problem.
-- Developing the NLP workflow.
-- Working with the Transformer-based approach.
-- Preparing and testing Arabic and English inputs.
-- Evaluating and documenting the results.
-- Preparing the project architecture.
-- Writing the project documentation and reproduction steps.
-- Preparing the final submission and evidence package.
-
-### Contribution Evidence
-
-My contribution can be verified through the project's Git history,
-source-code files, documentation changes, and final commit.
-
-**Final Commit:** `29 sep 2026 11:50`
-
-# Assistance Disclosure
-
-AI assistance was used for documentation support, README structuring,
-English language refinement, and organizing the project documentation.
-
-ChatGPT was used as a supporting tool for writing and documentation.
-The project implementation, testing, results, and final decisions were
-reviewed and validated by the trainee.
-
-AI assistance was not used as a substitute for the trainee's own
-understanding, testing, or evaluation of the project.
+FILL_ME: project code license, dataset/model/library licenses, and source links. Do not imply ownership of third-party models, libraries, or institutional marks.
