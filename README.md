@@ -1,40 +1,152 @@
-# Bayan Applied NLP Course Project --bayann1pprogHYA
+# Bayan — Bilingual Applied NLP Project
 
-## Training Context (SDAIA-AIE)
-- **Program Code:** SDAIA-F-CRS100-01-01
-- **Academy:** SDAIA Academy ([SDAIA Academy GitHub](https://github.com/SDAIAAcademy))
-- **Trainer:** Meaad Al-Sarri
-- **Trainee:** Haya Albaqami
-- **Models & Data Sources:** HuggingFace Hub & Bayan Course Repositories.
+**Learner ID / GitHub username:** FILL_ME  
+**GitHub:** FILL_ME  
+**Final release:** FILL_ME
 
----
+## Executive summary | الملخص
 
-## §1. Notebooks Links (Colab)
-| Notebook ID | Description | Colab Link |
-| :--- | :--- | :--- |
-| **Notebook 01** | Environment, Setup & Processing Pipeline | [Open in Colab](https://colab.research.google.com) |
-| **Notebook 02** | Attention Mechanisms & Transformers | [Open in Colab](https://colab.research.google.com) |
-| **Notebook 03** | Classification & Named Entity Recognition (NER) | [Open in Colab](https://colab.research.google.com) |
-| **Notebook 04** | Question Answering & No-Answer Alignment | [Open in Colab](https://colab.research.google.com) |
-| **Notebook 05** | FAISS Retrieval & Re-ranking | [Open in Colab](https://colab.research.google.com) |
-| **Notebook 06** | Evaluation, Slices & Confidence Intervals | [Open in Colab](https://colab.research.google.com) |
-| **Notebook 07** | Error Analysis & Top Fixes | [Open in Colab](https://colab.research.google.com) |
-| **Notebook 08** | Benchmarking & Project Mode Deployment | [Open in Colab](https://colab.research.google.com) |
-| **Notebook 09** | Model Serving & API Integration | [Open in Colab](https://colab.research.google.com) |
+FILL_ME: فقرة قصيرة تشرح المشكلة والمستخدم والنتيجة والحدود. اذكر صراحة أن البيانات تعليمية اصطناعية/عامة وليست بيانات مستفيدين حقيقية.
 
----
+## What Bayan does | ماذا يفعل بيان؟
 
-## §2. MEASURED_SMOKE & Results Table
-The core evaluation metrics measured under smoke and project configurations:
+1. FILL_ME: privacy/preprocessing.
+2. FILL_ME: topic and sentiment classification.
+3. FILL_ME: NER.
+4. FILL_ME: extractive QA/no-answer.
+5. FILL_ME: bilingual semantic search.
+6. FILL_ME: evaluation and serving.
 
-| Metric / Task | Measured Value | Target Threshold | Evidence Reference |
-| :--- | :--- | :--- | :--- |
-| **Macro-F1 (Entity-1)** | 0.84 | > 0.80 | `/reports/measured_smoke_metrics.json`[cite: 1] |
-| **Re-ranking MRR** | 0.89 (improved from 0.72) | Baseline improvement | `/reports/reranking_comparison.json`[cite: 1] |
-| **Recall@k** | 0.94 | > 0.90 | `/reports/reranking_comparison.json`[cite: 1] |
+## Scope and non-goals | النطاق وما لا يدعيه المشروع
 
-### Reproduction Steps:
-1. Clone the repository and navigate to the root folder:
-   ```bash
-   git clone [https://github.com/progHYA/--bayann1pprogHYA.git](https://github.com/progHYA/--bayann1pprogHYA.git)
-   cd --bayann1pprogHYA
+- In scope: FILL_ME
+- Out of scope: FILL_ME
+- Not for: production/government decisions without further validation — FILL_ME
+
+## Reproduce on Google Colab Free
+
+| # | Notebook | Colab | Purpose |
+|---:|---|---|---|
+| 00 | runtime doctor | FILL_ME | environment |
+| 01 | text processing/tokenisation | FILL_ME | Gate A |
+| 02 | attention/transformers | FILL_ME | LO2 |
+| 03 | classification | FILL_ME | Gate B |
+| 04 | NER and QA | FILL_ME | Gate B |
+| 05 | Arabic NLP | FILL_ME | Gate C |
+| 06 | semantic search | FILL_ME | Gate C |
+| 07 | evaluation/error analysis | FILL_ME | Gate C |
+| 08 | optimisation/serving | FILL_ME | Gate D |
+
+Clean-run instructions:
+
+1. Open notebook 00 and choose **Save a copy in Drive**.
+2. Run in numeric order using Colab Free.
+3. Use **Runtime → Restart session and run all** before final evidence.
+4. Do not place tokens, PII, model weights, or private Drive links in the repository.
+
+## Architecture
+
+```mermaid
+flowchart LR
+    A["AR/EN feedback"] --> B["Privacy + preprocessing"]
+    B --> C["Classification / NER / QA"]
+    B --> D["Embeddings + FAISS"]
+    C --> E["Versioned response"]
+    D --> E
+    E --> F["Evaluation + tested API"]
+```
+
+## Results | النتائج
+
+كل رقم يحمل `MEASURED`, `MEASURED_SMOKE`, `SYSTEMS_SMOKE`, `TARGET`, أو `REFERENCE`.
+
+| Component | Metric | Result + label | Split/workload | Evidence |
+|---|---|---:|---|---|
+| topic classification | Macro-F1 | FILL_ME | FILL_ME | FILL_ME |
+| sentiment classification | Macro-F1 | FILL_ME | FILL_ME | FILL_ME |
+| NER | entity F1 | FILL_ME | FILL_ME | FILL_ME |
+| QA | EM/F1/no-answer | FILL_ME | FILL_ME | FILL_ME |
+| search | Recall@k/MRR | FILL_ME | FILL_ME | FILL_ME |
+| serving | p95/throughput/quality tax | FILL_ME | FILL_ME | `BENCHMARKS.md` |
+
+## Error found and decision | خطأ وقرار
+
+- Observed failure: FILL_ME
+- Slice/taxonomy: FILL_ME
+- Fix or deferred action: FILL_ME
+- Evidence after change: FILL_ME
+
+## Measured extension | الامتداد المقاس
+
+- Extension chosen: FILL_ME
+- Baseline: FILL_ME
+- Benefit/cost metric: FILL_ME
+- Evidence path: FILL_ME
+- Decision and limitation: FILL_ME
+
+## Repository evidence
+
+- `DATA_CARD.md`
+- `MODEL_CARD.md`
+- `EVALUATION_REPORT.md`
+- `BENCHMARKS.md`
+- `DECISIONS.md`
+- `PROGRESS.md`
+- `PROJECT_SUMMARY.json`
+- `SUBMISSION.yml`
+
+## Limitations and responsible use
+
+- Data limitation: FILL_ME
+- Arabic/dialect/Arabizi limitation: FILL_ME
+- Task/model limitation: FILL_ME
+- Evaluation uncertainty: FILL_ME
+- Serving/security limitation: FILL_ME
+- Human review requirement: FILL_ME
+
+## Final validation
+
+```bash
+PYTHONPATH=src python scripts/validate_submission.py . --require-tag
+PYTHONPATH=src python scripts/preflight_submission.py . --require-tag
+```
+
+- Validator status: FILL_ME
+- CI badge/link: FILL_ME
+- Release `submission-v1.0`: FILL_ME
+
+## Presentation | العرض
+
+See `PRESENTATION.md`. FILL_ME: link your own examples and reports.
+
+## My contribution | مساهمتي
+
+- My change and file: FILL_ME
+- Reason and evidence: FILL_ME
+
+## AI assistance | الاستعانة بالأدوات
+
+FILL_ME: tool, assistance, verification and source credits—or honestly state none.
+
+## Training context | السياق التدريبي
+
+This educational project was developed during Applied Natural Language Processing
+with Transformers (SDA-AIE-211) in the SDAIA Academy training context.
+أُنجز هذا المشروع التعليمي ضمن دورة معالجة اللغات الطبيعية باستخدام المحولات
+(SDA-AIE-211) في السياق التدريبي لأكاديمية سدايا.
+
+Academy | الأكاديمية: [SDAIA Academy](https://github.com/SDAIAAcademy)  
+Trainer | المدربة: Meaad Al-Marri — ميعاد المري  
+Course source: https://github.com/almiyead-rgb/bayan-applied-nlp-course  
+#SDAIAAcademy
+
+This attribution does not claim Academy endorsement or ownership of third-party assets.
+لا يدعي هذا النسب اعتماد المشروع أو تملك أصول الأطراف الأخرى.
+
+## Final hand-in acknowledgement | إقرار التسليم النهائي
+
+FILL_ME: confirm you reviewed all requirements and understand this version is graded once, with no edited replacement after hand-in. Final tag: `submission-v1.0`.
+
+## License and acknowledgements
+
+FILL_ME: project code license, dataset/model/library licenses, and source links. Do not imply ownership of third-party models, libraries, or institutional marks.
