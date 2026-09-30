@@ -1,12 +1,12 @@
 # Bayan — Bilingual Applied NLP Project
 
-**Learner ID / GitHub username:** FILL_ME  
-**GitHub:** FILL_ME  
-**Final release:** FILL_ME
+**Learner ID / GitHub username:** progHYA 
+**GitHub:** 
+**Final release:** submission-v1.0
 
 ## Executive summary | الملخص
 
-FILL_ME: فقرة قصيرة تشرح المشكلة والمستخدم والنتيجة والحدود. اذكر صراحة أن البيانات تعليمية اصطناعية/عامة وليست بيانات مستفيدين حقيقية.
+FILL_ME: فقرة قصيرة تشرح المشكلة والمستخدم والنتيجة والحدود. اذكر صراحة أ.
 
 ## What Bayan does | ماذا يفعل بيان؟
 
